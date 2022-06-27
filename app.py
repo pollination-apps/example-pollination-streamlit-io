@@ -38,7 +38,7 @@ st.subheader('Send geometry')
 # sg = sent geometry
 sg_col1, sg_col2 = st.columns(2)
 
-geometry_file = open(os.getcwd() + '/files/geometry.json')
+geometry_file = open(os.getcwd() + '/sample-assets/geometry.json')
 geometry_to_send = json.load(geometry_file)
 
 with sg_col1:
@@ -46,7 +46,7 @@ with sg_col1:
     st.info('The get_hbjson component gets an hbjson model from the host CAD environment and returns the hbjson as a json document. It can be configured to work either by user selection or through a continuous subscription to the hbjson model in the CAD environment.')
 
 with sg_col2:
-    st.text(os.getcwd() + '/examples/files/single-family-home.hbjson')
+    st.text(os.getcwd() + '/sample-assets/single-family-home.hbjson')
     st.json(geometry_to_send, expanded=False)
 
 st.subheader('Send hbjson')
@@ -54,7 +54,7 @@ st.subheader('Send hbjson')
 # sh = sent hbjson
 sh_col1, sh_col2 = st.columns(2)
 
-hbjson_file = open(os.getcwd() + '/files/single-family-home.hbjson')
+hbjson_file = open(os.getcwd() + '/sample-assets/single-family-home.hbjson')
 hbjson_to_send = json.load(hbjson_file)
 
 with sh_col1:
@@ -62,5 +62,5 @@ with sh_col1:
     st.info('The get_hbjson component gets an hbjson model from the host CAD environment and returns the hbjson as a json document. It can be configured to work either by user selection or through a continuous subscription to the hbjson model in the CAD environment.')
 
 with sh_col2:
-    st.text(os.getcwd() + '/examples/files/single-family-home.hbjson')
+    st.text(os.getcwd() + '/sample-assets/single-family-home.hbjson')
     st.json(hbjson_to_send, expanded=False)
